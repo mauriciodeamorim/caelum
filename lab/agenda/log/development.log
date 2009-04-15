@@ -1,0 +1,88 @@
+  [4;36;1mSQL (0.000938)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000500)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.004914)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.003362)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000586)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000383)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePessoas (20090409121154)
+  [4;36;1mSQL (0.004049)[0m   [0;1mCREATE TABLE "pessoas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "email" varchar(255), "fone" varchar(255), "blog" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.002933)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090409121154')[0m
+  [4;36;1mSQL (0.000822)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000507)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000599)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000237)[0m   [0mPRAGMA index_list("pessoas")[0m
+
+
+Processing PessoasController#index (for 127.0.0.1 at 2009-04-09 09:13:47) [GET]
+  Session ID: 146b93018a90f58d785f24d0799420c4
+  Parameters: {"action"=>"index", "controller"=>"pessoas"}
+  [4;36;1mPessoa Load (0.001455)[0m   [0;1mSELECT * FROM "pessoas" [0m
+Rendering template within layouts/pessoas
+Rendering pessoas/index
+Completed in 0.02799 (35 reqs/sec) | Rendering: 0.00644 (23%) | DB: 0.00146 (5%) | 200 OK [http://localhost/pessoas]
+
+
+Processing PessoasController#new (for 127.0.0.1 at 2009-04-09 09:14:09) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--5d76d3b13e672ccc1d1766c21bb62303fd1374f7
+  Parameters: {"action"=>"new", "controller"=>"pessoas"}
+Rendering template within layouts/pessoas
+Rendering pessoas/new
+Completed in 0.03659 (27 reqs/sec) | Rendering: 0.01499 (40%) | DB: 0.00000 (0%) | 200 OK [http://localhost/pessoas/new]
+
+
+Processing PessoasController#create (for 127.0.0.1 at 2009-04-09 09:14:26) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMDdlNjlkOTE5NTg5ZjVjYzZmNjI1ZGUyYjA4YzY5
+NDciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--778759cf16e579dac306004ee395e30dd170ec30
+  Parameters: {"pessoa"=>{"blog"=>"", "nome"=>"Mauricio de Amorim", "fone"=>"123", "email"=>"amorim@timedev.com"}, "commit"=>"Create", "authenticity_token"=>"13bb012e9d178fa227a03e64e64124b97304c339", "action"=>"create", "controller"=>"pessoas"}
+  [4;35;1mPessoa Create (0.001575)[0m   [0mINSERT INTO "pessoas" ("updated_at", "blog", "nome", "fone", "email", "created_at") VALUES('2009-04-09 12:14:26', '', 'Mauricio de Amorim', '123', 'amorim@timedev.com', '2009-04-09 12:14:26')[0m
+Redirected to http://localhost:3000/pessoas/1
+Completed in 0.05574 (17 reqs/sec) | DB: 0.00157 (2%) | 302 Found [http://localhost/pessoas]
+
+
+Processing PessoasController#show (for 127.0.0.1 at 2009-04-09 09:14:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMDdlNjlkOTE5NTg5ZjVjYzZmNjI1ZGUyYjA4YzY5
+NDciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiVQZXNzb2Egd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVk
+LgY6CkB1c2VkewY7B0Y=--73ea2957f96c7bf633efe4e9883682ba2a963181
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"pessoas"}
+  [4;36;1mPessoa Load (0.001818)[0m   [0;1mSELECT * FROM "pessoas" WHERE ("pessoas"."id" = 1) [0m
+Rendering template within layouts/pessoas
+Rendering pessoas/show
+Completed in 0.03842 (26 reqs/sec) | Rendering: 0.01693 (44%) | DB: 0.00182 (4%) | 200 OK [http://localhost/pessoas/1]
+
+
+Processing PessoasController#index (for 127.0.0.1 at 2009-04-09 12:38:22) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMDdlNjlkOTE5NTg5ZjVjYzZmNjI1ZGUyYjA4YzY5
+NDciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiVQZXNzb2Egd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVk
+LgY6CkB1c2VkewY7B1Q=--96dbf7ee366cb361c1d72892706c7f0a12d16710
+  Parameters: {"action"=>"index", "controller"=>"pessoas"}
+  [4;35;1mPessoa Load (0.001267)[0m   [0mSELECT * FROM "pessoas" [0m
+Rendering template within layouts/pessoas
+Rendering pessoas/index
+Completed in 0.02587 (38 reqs/sec) | Rendering: 0.01006 (38%) | DB: 0.00127 (4%) | 200 OK [http://localhost/pessoas]
+
+
+Processing PessoasController#index (for 127.0.0.1 at 2009-04-09 12:39:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMDdlNjlkOTE5NTg5ZjVjYzZmNjI1ZGUyYjA4YzY5
+NDciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--778759cf16e579dac306004ee395e30dd170ec30
+  Parameters: {"action"=>"index", "controller"=>"pessoas"}
+  [4;36;1mPessoa Load (0.001219)[0m   [0;1mSELECT * FROM "pessoas" [0m
+Rendering template within layouts/pessoas
+Rendering pessoas/index
+Completed in 0.03161 (31 reqs/sec) | Rendering: 0.00912 (28%) | DB: 0.00122 (3%) | 200 OK [http://localhost/pessoas]

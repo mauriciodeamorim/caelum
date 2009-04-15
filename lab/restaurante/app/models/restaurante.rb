@@ -1,0 +1,4 @@
+class Restaurante < ActiveRecord::Base
+	has_many :qualificacoes
+	#validate_presence_of :nome, :message => "Campo obrigatório"
+end

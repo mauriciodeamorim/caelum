@@ -1,0 +1,98 @@
+Passos para criar uma aplicação Rails	
+
+	rails restaurante -d mysql
+
+
+	rake db:create
+ou
+	rake db:create:all
+	rake db:create RAILS_ENV = production (nome da base de dados)
+#para executar as migrações de banco de dados
+	rake db:migrate 
+#ou para voltar a migracao pode-se especificar a versão da migração.
+rake db:migrate VERSION=2
+# Schema Evolution (como resolver o problema dos dados existentes na base de produção)
+# este é um problema por questão dos dados existentes
+#migration geralmente é usado para estrutura dos dados.
+
+#Modelo sempre é no singular
+#Para criar as migrações do Banco de dados
+script/generate model restaurante
+rake db:migrate
+script/generate migration adiciona_coluna_especialidade
+rake db:migrate
+
+#convenção para espaços são dois na indentação
+
+
+#Dicas
+#Quando for desenvolvimento usar sempre o default, senão incluir a versão ou banco
+#Exemplo: rake db:migrate RAILS_ENV = nome_do_banco
+#IRB bombado
+# script/console -e production #ou development
+#script/server -e #test ou production ou development
+
+#monitorando os logs
+#tail -f log/development.log
+rake -T ou rake -T db 
+#outros comandos do migrate
+db:migrate:redo (desfaz a última e refaz novamente) para incluir algum campo que faltou
+#na versão superior a 2.0 o rails resolveu migrations mudando o número sequencial para o timestamp
+#Verificar com funciona o meridiano de Greenwick
+Arquivos e pastas do projeto
+environment.rb 
+
+
+
+
+
+
+class Restaurante < ActiveRecord::Base
+end
+
+#outras gems no lugar do ActiveRecord podem ser DataMapper do Merb e Sequel para banco de dados legado			
+# O Rails é DRY (Dont Repeat Your self - Não se repita)
+class CreateRestaurantes < ActiveRecord::Migration
+	def self.up
+		#execute("codigo sql que você quiser")
+		#create_table :restaurantes
+		#add_column :restaurantes, :nome, :string
+		create_table :restaurantes do |t| #ActiveRecord::ConnectionAdapters::TableDefinition
+			#t.column :nome, :string, {:limit =>, :null => true}
+			#como os últimos parâmetros são um hash pode-se omitir as chaves
+			t.column :nome, :string, :limit =>, :null => true
+			t.column :endereco, :string
+			t.column :especialidade, :string
+			#colunas mágicas que o próprio rails cuida
+			t.column :create_at, :datetime
+			t.column :update_at, :datetime #ou timestamp
+			#ou da forma para DRY para os _at
+			#t.timestamps
+			t.column :create_on, :date
+			t.column :update_on, :date
+	#Da forma DRY (ou Sexy Migration)
+			#t.string :nome
+			#t.string :endereco
+			#t.string :especialidade
+			
+	
+				
+	
+	end
+	
+	def self.down
+		drop_table :restaurantes
+		#apaga tudo inclusive os dados
+	end		
+end 
+
+======================
+no MySql
+mysql -u root
+show databases;
+
+
+==============
+14/04/09
+comandos para criar uma aplicação
+script/generate model

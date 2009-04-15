@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @pessoa.name %>
+</p>
+
+<p>
+  <b>Nascimento:</b>
+  <%=h @pessoa.nascimento %>
+</p>
+
+<p>
+  <b>Altura:</b>
+  <%=h @pessoa.altura %>
+</p>
+
+
+<%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |
+<%= link_to 'Back', pessoas_path %>

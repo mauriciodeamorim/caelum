@@ -1,0 +1,110 @@
+Dicas
+
+Como criar literais de uma outra forma
+
+t = %q | "...", "..."|  (Seria a criação de string com ' ' aspas simples
+t = %Q ( "...", #{xxx}) (Pode ser qualquer limitador, seria como aspas duplas para aceitar #{})
+
+
+Para saber se um objeto responde a um método
+obj.respond_to?:to_s
+
+Para saber quais os métodos de um objeto ordenadamente
+puts t.methods.sort
+
+Testando expressões regulares
+r = /^a.* c$/
+t = "axdtec"
+result = t =~ r
+retorna um número ou nil, por isso dá para usar em um if
+
+uma forma mais eficaz de usar ExpReg é usar o método match da classe MatchData
+md = r.match(t)
+md.size
+md.captures(0)
+
+
+Para usar no irb
+require 'irb/completion'
+ou
+require 'utility_belt'
+
+require 'rubygems'
+$LOAD_PATH pode ser abreviado para $:
+
+vc pode adicionar caminhos
+$: << "c:\ruby\lala.rb"
+
+gem list
+gem search -r
+
+
+===============
+sites
+guj.com.br
+
+
+========
+irb bombado
+ruby script/console
+
+=======
+mysql comandos
+use nome_tabela;
+show tables;
+desc nome_tabela;
+
+========
+dicas framework rails
+ActiveSupport
+t = "PessoaLegal"
+t.underscore
+t.camelize
+t.humanize
+t.titleize
+t.pluralize
+t.singularize
+
+================
+Padrões de ORM catalogados pelo Martim Fowler
+- ActiveRecord (Daí o nome da gem)
+- DataMapper (vem o nome do activeRecord do Merb)
+Quando tem dao é usado para infraestrutura de persistência
+
+#Exemplo da classe Restaurante
+class Restaurante < ActiveRecord::Base
+	r = Restaurante.new
+	r.nome = "Fasano"
+	r.endereco = "Avantandava, 100"
+	r.especialidade = "massas"
+	r.save
+#usando blocos
+restau = Restaurante.new do |r|
+		r.nome = "Joaquim"
+		r.endereco = "xxx"
+		end
+		restau.save
+		rest.destroy	
+	
+	
+#tratamento de exceção no rails
+begin
+	
+rescue #seria o catch do C#
+# rescue de uma linha não existe faz-se
+#r.save! rescue....
+#Exemplo: item = consulta recue nil
+ensure #seria o Finally do C#
+	
+#para lançar uma exceção usa-se
+#raise "mensagem"
+#raise RuntimeError (pode-se passar qualquer classe ou instância RuntimeError.new("...")	
+end
+
+==================
+Para monitorar o log
+tail -f log/development.log
+
+=========
+O arquivo schema.rb em db/migrate/ guarda a situação atual do banco de dados
+para preparar um banco produção use-se rake db:schema:load

@@ -1,0 +1,416 @@
+Anotações
+
+Tipagem dinâmica ensina a classe com os campos que exitem no BD a cada execução;
+
+Biblioteca em ruby chamada Hpricot que pode ser usada para navegar em um documento, é uma DSL para manipular documentos.
+
+Um exemplo de uso nos scraps do Orkut
+doc = Hpricot("....")
+
+t = doc /'html' /'div#scrapbook' / 'ul' / 'li.scrap' 
+
+===============================
+Convenções em Ruby
+- Sempre que for bool colocar ? no final
+
+Exemplo
+Em C# seria
+texto = "abc"
+if texto != nil
+ puts "alguma"
+end
+
+Em Ruby (quase)
+texto = "abc"
+if texto.nil()  // por conveção fica texto.nil?
+ puts texto
+end
+
+Em Ruby verdadeiramente
+puts texto if ! texto.nil?
+melhor ainda
+puts texto if not texto.nil?
+ou pode-se usar o unless para negar o if
+puts texto unless texto.nil?
+
+Parenteses vai sempre na definação do método
+pessoa = Object.new()
+def pessoa.fala()
+   puts "Sei falar"
+end
+
+pessoa.fala 
+
+def pessoa.troca(roupa, local)
+ puts "Trocando a #{roupa} no #{local}"
+end
+
+pessoa.troca 'camiseta', 'sala'
+
+pode passar valor para os parâmetros
+def pessoa.troca(roupa, local='wc', temperatura = nil)
+ puts "Trocando a #{roupa} no #{local}"
+end
+Quando tem valor default tem que ser os últimos declarados
+=================
+Interpolação
+#{}
+=============
+
+Ruby não tem sobrecarga de métodos
+Não é comum usar a palavra return, pois a última linha sempre é o return.
+Você pode usar o return ou não, um método sempre tem retorno e o padrão é nil
+================================
+
+Reaproveitando um método
+No Ruby a classe é fabrica e não uma receita.
+
+ronaldo = Object.new
+
+def ronaldo.fala()
+end
+
+class Pessoa
+   def fala()
+	puts 'Sei falar.'
+   end
+   def troca(roupa, local)
+	"Trocando a #{roupa} no #{local}
+   end
+#para chamar um método em mim mesmo eu uso "self"
+   def faz_algo()
+	self.fala()
+   end
+end
+
+A palavra super chamada o método original.
+
+Quando eu chamo um método eu chamo em alguém
+
+===========================
+modificadores de acesso
+private
+def sonho
+...
+end
+
+public ou protected
+===========================
+
+Atributos 
+atributos pertencem a instância do método
+
+def muda_nome(novo)
+	@nome = novo
+end
+
+def diz_nome()
+	@nome
+end
+
+dependa do O quê e não do como (encapsulamento)
+========================
+construtor no Ruby
+def initialize(nome)
+...
+end
+não sobre carga, pode declarar vários parâmetros inclusive opcionais
+===========================
+Factory Method é quando o método está dentro da própria classe e não em uma classe Factory
+neste pattern o construtor deve ser private, em Ruby o initialize é private por padrão
+
+=========================
+adaptação das propriedades para Ruby
+usa-se Syntax Sugar
+def initialize(nome)
+...
+end
+
+def nome= (novo) //set
+ @nome = novo
+end
+
+def nome()   //get 
+  @nome
+end
+
+
+//na chamada do objeto fica assim:
+p = Pessoa.new 'Jose'
+p.nome = "joão"
+puts p.nome
+
+========================
+em ruby não existe operador, eles na verdade são métodos e podem ser sobrescritos
+class Fixnum
+ def +(num)
+ end
+end
+===========
+Bang (!)
+O bang serve para avisar que faz algo perigoso
+pode ser usado por exemplo para sobrescrever o método upcase que não muda o objeto string e sim cria um outro.
+x.upcase! (sobrescrito para modificar o próprio objeto string)
+============================
+classe é uma forma (de bolo)
+objetos nascem de uma classe
+a classe também é um objeto que vem da classe Class que pode criar um objeto classe como c = Class.new
+paradoxo - quem nasceu primeiro a classe ou o objeto.
+uma classe na verdade é uma constante
+em ruby não existe declaração de classe
+no meio do código pode-ser declarar
+
+Pessoa = Class.new // Pessoa é uma constante
+p = Pessoa.new
+
+//um método usando isso seria
+def Pessoa.total_no_mundo()
+...
+end
+
+para colocar algo em todas as classes muda-se ou insere na classe Class
+
+para sobrescrever o new da classe usa-se
+def Pessoa.new 
+ //para chamar o new original usa-se super
+end
+
+=====================================
+def nome()
+"#{nome}:#{total}"
+
+def Pessoa.total_no_mundo()
+  @total = 10
+end
+====================
+qualquer coisa no código ruby é sempre
+1-literal
+2-variável/constante
+3-palavra reserva
+4-método (se é método chama em alguém
+====================
+self fora da classe é main
+self dentro da classe é apontamento para o próprio objeto classe
+ou idiomismo
+
+def self.total_no_mundo()
+  @total = 10
+end
+====================
+class variables = @@ //é a mesma coisa que static, é uma variável global na verdade.
+==================================
+todo método Class tem um método de atribuição que cria os "getters e setters"
+
+attr_accessor :email
+attr_accessor :endereco
+attr_accessor :nome
+ou 
+attr_accessor :email, endereco, nome
+
+para criar separado
+attr_reader :nome
+attr_writer :nome
+===================================
+pode criar um método alias
+
+class SeiLa
+ alias x y
+ def x()
+ ...
+ end
+================
+Arrays
+def metodo(*args) //* splat
+ puts args.size
+ puts args[0]
+end
+l = metodo(15, 17 ,18)
+
+n1, n2, n3 = *l
+
+//
+def legal
+ [:a, /xpto/]
+end
+
+v1, v2 = legal
+
+l = [17, 15, 13]
+metodo(*l)
+
+
+tupla = conjunto com mais que duas coisas
+
+
+end
+
+====================
+Programação funcional (o ruby embutido isto)
+Não tem for ou foreach
+
+verificar como fazer = recursão
+calculo de fibonacci
+fib(n) = fib(n-1) + fib(n -2)
+
+high orders functions - tratar funções como membros improstantes da lingauagem
+funções que retornam funções
+
+em javascript
+var abc = function(){
+ alert('fucnione');
+};
+alert(abc);
+abc();
+
+function outra(p1){
+ alert(p1);
+};  
+
+outra(abc);
+
+outra(abc);
+
+outra(function(){
+ alert('funciona');
+};
+
+//um if funcional
+
+function if(condicao, funcaoVerdadeira, funcaoFalsa){
+ condicao && funcaoVerdadeiro();  // se verdadeiro sempre avalia a segunda condicao
+ condicao || funcaoFalsa(); // se falso sempre avalia a segunda condicao
+
+};
+//usando o if
+if(n > 10, funci
+
+
+
+// em ruby
+bloco de código associado
+yield() //ildi - deixa o outro, renda-se
+se o bloco tem só uma linha usa-se chaves
+mais de uma usa-se do end
+
+se o if é só de uma linha coloca o if no final    seila if n > 10
+
+exemplo 
+def metodo()
+  puts 'chamou'
+  r = yield(15) if block_given? // block_given chama um bloco associado se existir
+end
+
+metodo { |x| puts "sou #{x}" }
+
+metodo do |z, y=0|
+ puts "sou #{x}"
+ puts 'bloco'
+end
+=============================
+colection - na documentação está no módulo Enumerable
+lista = ['um','dois','tres']
+
+lista.each do |item|  //item pode ser o que vc quiser
+ puts item
+end
+
+//map ou collect
+map - executa um bloco e retorna 
+exemplo
+
+novo = lista.map do |item|
+	 item.upcase
+	end
+
+//find
+encontrado = lista.find do |item|
+		item.size == 4
+	end
+
+//findall ou select
+lista2 = lista.findall do |do|
+	   item.size = 4
+	end
+
+=================
+Exercicio - fazer o codigo abaixo funcionar
+
+ac = ArcoIris.new
+ac.each do |cor|
+ puts cor
+end
+
+grandes = ac.map do |cor|
+ cor.upcase
+end
+
+** Resolucao **
+class ArcoIris
+//se incluir o modulo Enumerable, basta implementar o método each para ter acesso aos métodos find, sort
+	def each()
+	 yield("vermelho")
+	 yield("laranja")
+	 .
+	 . 
+	end
+
+	def map()
+	 resultados = []
+	 each do |c|
+	  resultados << yield(c)
+	 end
+	 resultados
+	end
+end	
+
+***Exemplo de utilização do método map***
+lista = ['um','dois','tres']
+
+nova_lista = lista.map do |item|
+	 item.upcase
+	end
+nova_lista será um novo array com todos os itens em maiúsculo.
+
+Rails
+Formas de chamar o CRUD
+r = Restaurante.new
+
+r.save
+r.destroy
+
+Restaurante.destroy(1) ou menos usado Restaurante.delete(1)
+
+#usando Hash
+
+
+
+#outro - importante
+r.update_attributes(:nome => '...', :ssmds => '...')
+
+
+#Método missing
+Sobrescrever o metodo missing para criar um framework
+def method_missing(name, *args)
+	puts "<#{}> #{args[0]}"
+	yield if block_given?
+	puts "</ #{name}>"
+end
+
+html do 
+	body do
+		div do
+			span "Meu Texto"
+		end
+	end
+end
+
+ficaria 
+<html>
+	<body>
+		<div>
+			<span> Meu Texto
+			</span>
+		</div>
+	</body>
+</html>
+

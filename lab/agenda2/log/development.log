@@ -1,0 +1,46 @@
+  [4;36;1mSQL (0.012676)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000129)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.009455)[0m   [0;1mCREATE DATABASE `agenda2_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000262)[0m   [0mCREATE DATABASE `agenda2_production` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000094)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000252)[0m   [0;1mCREATE DATABASE `agenda2_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000095)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000386)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.040924)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.005148)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000401)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePessoas (20090409155847)
+  [4;35;1mSQL (0.003778)[0m   [0mCREATE TABLE `pessoas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `nascimento` date, `altura` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.030897)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090409155847')[0m
+  [4;35;1mSQL (0.000528)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000297)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000265)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.035460)[0m   [0;1mSHOW FIELDS FROM `pessoas`[0m
+  [4;35;1mSQL (0.001018)[0m   [0mdescribe `pessoas`[0m
+  [4;36;1mSQL (0.000479)[0m   [0;1mSHOW KEYS FROM `pessoas`[0m
+
+
+Processing PessoasController#index (for 127.0.0.1 at 2009-04-09 13:04:05) [GET]
+  Session ID: 080b0ce791390c9fa224a68e53516ec8
+  Parameters: {"action"=>"index", "controller"=>"pessoas"}
+  [4;36;1mSQL (0.000181)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000096)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPessoa Load (0.012795)[0m   [0;1mSELECT * FROM `pessoas` [0m
+Rendering template within layouts/pessoas
+Rendering pessoas/index
+Completed in 0.03571 (28 reqs/sec) | Rendering: 0.00654 (18%) | DB: 0.01307 (36%) | 200 OK [http://localhost/pessoas]
+
+
+Processing PessoasController#new (for 127.0.0.1 at 2009-04-09 13:04:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--8a188d1c144e2128ffe998f7361d864e63b71056
+  Parameters: {"action"=>"new", "controller"=>"pessoas"}
+  [4;35;1mPessoa Columns (0.001218)[0m   [0mSHOW FIELDS FROM `pessoas`[0m
+Rendering template within layouts/pessoas
+Rendering pessoas/new
+Completed in 0.15702 (6 reqs/sec) | Rendering: 0.12923 (82%) | DB: 0.00122 (0%) | 200 OK [http://localhost/pessoas/new]

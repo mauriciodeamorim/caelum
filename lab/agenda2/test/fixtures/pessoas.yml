@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  nascimento: 2009-04-09
+  altura: 1.5
+
+two:
+  name: MyString
+  nascimento: 2009-04-09
+  altura: 1.5

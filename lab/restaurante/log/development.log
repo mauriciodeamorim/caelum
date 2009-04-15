@@ -1,0 +1,311 @@
+  [4;36;1mSQL (0.000214)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000116)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.037905)[0m   [0;1mDROP DATABASE IF EXISTS `restaurante_development`[0m
+  [4;36;1mSQL (0.000232)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000101)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000306)[0m   [0;1mCREATE DATABASE `restaurante_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000102)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000100)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000099)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000106)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000438)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006969)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.004976)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000407)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000574)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20090413140814)
+  [4;35;1mSQL (0.003384)[0m   [0mCREATE TABLE `restaurantes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(80), `endereco` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001091)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090413140814')[0m
+  [4;35;1mSQL (0.000485)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000284)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000282)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.001192)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mSQL (0.001009)[0m   [0mdescribe `restaurantes`[0m
+  [4;36;1mSQL (0.000472)[0m   [0;1mSHOW KEYS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000107)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000433)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20090413140814)
+Migrating to AdicionaColunaEspecialidade (20090413141148)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'restaurante_development.restaurante' doesn't exist: ALTER TABLE `restaurante` ADD `especialidade` varchar(40)[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000106)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000451)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000219)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20090413140814)
+Migrating to AdicionaColunaEspecialidade (20090413141148)
+  [4;36;1mSQL (0.012535)[0m   [0;1mALTER TABLE `restaurantes` ADD `especialidade` varchar(40)[0m
+  [4;35;1mSQL (0.001115)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090413141148')[0m
+  [4;36;1mSQL (0.000464)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001124)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.023257)[0m   [0;1mdescribe `restaurantes`[0m
+  [4;35;1mSQL (0.000524)[0m   [0mSHOW KEYS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.000227)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000182)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRestaurante Columns (0.001287)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mSQL (0.010680)[0m   [0mBEGIN[0m
+  [4;36;1mRestaurante Create (0.000573)[0m   [0;1mINSERT INTO `restaurantes` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-13 15:05:53', NULL, NULL, 'dffaa', '2009-04-13 15:05:53')[0m
+  [4;35;1mSQL (0.003617)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000769)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.000200)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000094)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRestaurante Columns (0.001155)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mRestaurante Load (0.000479)[0m   [0mSELECT * FROM `restaurantes` [0m
+  [4;36;1mSQL (0.000153)[0m   [0;1mBEGIN[0m
+  [4;35;1mRestaurante Create (0.000443)[0m   [0mINSERT INTO `restaurantes` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-13 15:51:45', 'comida 1', 'endereco 1', 'restaurante 1', '2009-04-13 15:51:45')[0m
+  [4;36;1mSQL (0.006323)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.021736)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000136)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRestaurante Columns (0.047229)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mSQL (0.000219)[0m   [0mBEGIN[0m
+  [4;36;1mRestaurante Create (0.073265)[0m   [0;1mINSERT INTO `restaurantes` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-14 12:22:04', 'Especialidade', 'Endereco', 'Fasano', '2009-04-14 12:22:04')[0m
+  [4;35;1mSQL (0.019860)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000172)[0m   [0;1mBEGIN[0m
+  [4;35;1mRestaurante Create (0.000419)[0m   [0mINSERT INTO `restaurantes` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-14 12:23:14', NULL, 'Endereco bloco', 'Nome bloco', '2009-04-14 12:23:14')[0m
+  [4;36;1mSQL (0.004019)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000132)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000073)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000134)[0m   [0mBEGIN[0m
+  [4;36;1mRestaurante Create (0.000376)[0m   [0;1mINSERT INTO `restaurantes` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-14 13:12:31', NULL, 'endereco do joao', 'joao', '2009-04-14 13:12:31')[0m
+  [4;35;1mSQL (0.002658)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000383)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000064)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000106)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000438)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000509)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20090413140814)
+Migrating to AdicionaColunaEspecialidade (20090413141148)
+Migrating to CreateClientes (20090414140841)
+  [4;36;1mSQL (0.000198)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000126)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000469)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000218)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20090413140814)
+Migrating to AdicionaColunaEspecialidade (20090413141148)
+Migrating to CreateClientes (20090414140841)
+  [4;36;1mSQL (0.080192)[0m   [0;1mCREATE TABLE `clientes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(80), `idade` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001029)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090414140841')[0m
+  [4;36;1mSQL (0.000507)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000277)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000281)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001159)[0m   [0mSHOW FIELDS FROM `clientes`[0m
+  [4;36;1mSQL (0.001913)[0m   [0;1mdescribe `clientes`[0m
+  [4;35;1mSQL (0.000573)[0m   [0mSHOW KEYS FROM `clientes`[0m
+  [4;36;1mSQL (0.001030)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mSQL (0.000995)[0m   [0mdescribe `restaurantes`[0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mSHOW KEYS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000127)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000473)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000217)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurantes (20090413140814)
+Migrating to AdicionaColunaEspecialidade (20090413141148)
+Migrating to CreateClientes (20090414140841)
+Migrating to CreateQualificacoes (20090414141340)
+  [4;36;1mSQL (0.003869)[0m   [0;1mCREATE TABLE `qualificacoes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `cliente_id` int(11), `restaurante_id` int(11), `nota` float, `valor_gasto` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.070686)[0m   [0mCREATE INDEX `index_qualificacoes_on_cliente_id` ON `qualificacoes` (`cliente_id`)[0m
+  [4;36;1mSQL (0.006617)[0m   [0;1mCREATE INDEX `index_qualificacoes_on_restaurante_id` ON `qualificacoes` (`restaurante_id`)[0m
+  [4;35;1mSQL (0.010490)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090414141340')[0m
+  [4;36;1mSQL (0.000526)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000306)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000310)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000978)[0m   [0mSHOW FIELDS FROM `clientes`[0m
+  [4;36;1mSQL (0.000947)[0m   [0;1mdescribe `clientes`[0m
+  [4;35;1mSQL (0.000547)[0m   [0mSHOW KEYS FROM `clientes`[0m
+  [4;36;1mSQL (0.002026)[0m   [0;1mSHOW FIELDS FROM `qualificacoes`[0m
+  [4;35;1mSQL (0.001235)[0m   [0mdescribe `qualificacoes`[0m
+  [4;36;1mSQL (0.000591)[0m   [0;1mSHOW KEYS FROM `qualificacoes`[0m
+  [4;35;1mSQL (0.001210)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.001034)[0m   [0;1mdescribe `restaurantes`[0m
+  [4;35;1mSQL (0.000446)[0m   [0mSHOW KEYS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.000947)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000168)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mQualificacao Columns (0.002514)[0m   [0;1mSHOW FIELDS FROM `qualificacoes`[0m
+  [4;35;1mSQL (0.000514)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRestaurante Columns (0.002598)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mSQL (0.000456)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRestaurante Columns (0.000902)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mSQL (0.000609)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRestaurante Columns (0.001198)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mSQL (0.000516)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRestaurante Columns (0.002087)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.000209)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000091)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mQualificacao Columns (0.001178)[0m   [0;1mSHOW FIELDS FROM `qualificacoes`[0m
+  [4;35;1mSQL (0.000442)[0m   [0mSHOW TABLES[0m
+  [4;36;1mRestaurante Columns (0.000905)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000086)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000492)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRestaurante Columns (0.001623)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+  [4;36;1mSQL (0.004866)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRestaurante Columns (0.003131)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+  [4;36;1mRestaurante Columns (0.001970)[0m   [0;1mSHOW FIELDS FROM `restaurantes`[0m
+  [4;35;1mRestaurante Load (0.040651)[0m   [0mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 2) [0m
+  [4;36;1mRestaurante Load (0.001456)[0m   [0;1mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 1) [0m
+  [4;36;1mSQL (0.000930)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000694)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mQualificacao Columns (0.001710)[0m   [0;1mSHOW FIELDS FROM `qualificacoes`[0m
+  [4;35;1mRestaurante Columns (0.002342)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+  [4;36;1mRestaurante Load (0.000157)[0m   [0;1mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 1) [0m
+  [4;35;1mRestaurante Load (0.006411)[0m   [0mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 1) [0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mBEGIN[0m
+  [4;35;1mQualificacao Create (0.000567)[0m   [0mINSERT INTO `qualificacoes` (`updated_at`, `nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`) VALUES('2009-04-14 14:46:48', 7.0, 120.0, NULL, 1, '2009-04-14 14:46:48')[0m
+  [4;36;1mSQL (0.011932)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000199)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000180)[0m   [0;1mCOMMIT[0m
+  [4;35;1mRestaurante Load (0.001458)[0m   [0mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 1) [0m
+  [4;36;1mRestaurante Load (0.000197)[0m   [0;1mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 1) [0m
+  [4;35;1mSQL (0.000168)[0m   [0mBEGIN[0m
+  [4;36;1mRestaurante Update (0.000642)[0m   [0;1mUPDATE `restaurantes` SET `nome` = 'Alterado', `updated_at` = '2009-04-14 14:50:38' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.009805)[0m   [0mCOMMIT[0m
+  [4;36;1mRestaurante Load (0.000512)[0m   [0;1mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 1) [0m
+  [4;35;1mQualificacao Load (0.000656)[0m   [0mSELECT * FROM `qualificacoes` WHERE (`qualificacoes`.restaurante_id = 1) [0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mBEGIN[0m
+  [4;35;1mQualificacao Create (0.000459)[0m   [0mINSERT INTO `qualificacoes` (`updated_at`, `nota`, `valor_gasto`, `cliente_id`, `restaurante_id`, `created_at`) VALUES('2009-04-14 14:52:19', 10.0, 1450.0, NULL, NULL, '2009-04-14 14:52:19')[0m
+  [4;36;1mSQL (0.006368)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.001107)[0m   [0mBEGIN[0m
+  [4;36;1mQualificacao Update (0.000575)[0m   [0;1mUPDATE `qualificacoes` SET `restaurante_id` = 1, `updated_at` = '2009-04-14 14:52:40' WHERE `id` = 2[0m
+  [4;35;1mSQL (0.002255)[0m   [0mCOMMIT[0m
+  [4;36;1mRestaurante Load (0.000205)[0m   [0;1mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 1) [0m
+  [4;35;1mRestaurante Load (0.001466)[0m   [0mSELECT * FROM `restaurantes` [0m
+  [4;36;1mRestaurante Load (0.000289)[0m   [0;1mSELECT * FROM `restaurantes` WHERE (`restaurantes`.`id` = 1) [0m
+  [4;35;1mQualificacao Load (0.001610)[0m   [0mSELECT * FROM `qualificacoes` WHERE (`qualificacoes`.restaurante_id = 1) [0m
+  [4;36;1mCliente Columns (0.000957)[0m   [0;1mSHOW FIELDS FROM `clientes`[0m
+  [4;35;1mSQL (0.001428)[0m   [0mBEGIN[0m
+  [4;36;1mCliente Create (0.001426)[0m   [0;1mINSERT INTO `clientes` (`name`, `updated_at`, `idade`, `created_at`) VALUES('Cliente Fulano', '2009-04-14 14:59:55', 1234, '2009-04-14 14:59:55')[0m
+  [4;35;1mSQL (0.002584)[0m   [0mCOMMIT[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-04-14 12:41:42) [GET]
+  Session ID: b020d6b7010c0b25f66c5706c4e7c21d
+  Parameters: {"action"=>"index", "controller"=>"cachorros"}
+
+
+NameError (uninitialized constant Applicationcontroller):
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:279:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:468:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:480:in `const_missing'
+    /app/controllers/cachorros_controller.rb:1
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:216:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:216:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:215:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:96:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:261:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:468:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:480:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/inflector.rb:285:in `constantize'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/inflector.rb:284:in `each'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/inflector.rb:284:in `constantize'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/string/inflections.rb:143:in `constantize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/routing/route_set.rb:387:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ApplicationController#late (for 127.0.0.1 at 2009-04-14 12:41:54) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--f8bfbcc5fb19f4781d0604138319fd58fb1654b1
+  Parameters: {"action"=>"late", "controller"=>"cachorros"}
+
+
+NameError (uninitialized constant Applicationcontroller):
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:279:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:468:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:480:in `const_missing'
+    /app/controllers/cachorros_controller.rb:1
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:216:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:216:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:215:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:96:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:261:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:468:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:480:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/inflector.rb:285:in `constantize'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/inflector.rb:284:in `each'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/inflector.rb:284:in `constantize'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/string/inflections.rb:143:in `constantize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/routing/route_set.rb:387:in `recognize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CachorrosController#late (for 127.0.0.1 at 2009-04-14 12:43:38) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--f8bfbcc5fb19f4781d0604138319fd58fb1654b1
+  Parameters: {"action"=>"late", "controller"=>"cachorros"}
+  [4;36;1mSQL (0.000229)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Completed in 0.00887 (112 reqs/sec) | Rendering: 0.00100 (11%) | DB: 0.00034 (3%) | 200 OK [http://localhost/cachorros/late]
