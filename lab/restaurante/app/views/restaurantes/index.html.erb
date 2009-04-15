@@ -5,6 +5,8 @@
 			<li> <%= restaurante.nome %> 
 				<! Lembrar sempre da url relativa ../>
 				<a href="../restaurantes/destroy?id= <% restaurante.id %>">  Remover </a>
+				<!usando os helpers (ActionView::UrlHelper) para resolver o problema acima>
+				<%= link_to 'Remover', :action => 'destroy', :id => restaurante %>
 			</li>
 		<%end%>
 	</ul>

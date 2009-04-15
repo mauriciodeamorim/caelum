@@ -1,0 +1,11 @@
+<html>
+	<h1>Listagem</h1>
+	<ul>
+		<%@restaurante.each do |restaurante| %>
+			<li> <%= restaurante.nome %> 
+				<! Lembrar sempre da url relativa ../>
+				<a href="../restaurantes/destroy?id= <% restaurante.id %>">  Remover </a>
+			</li>
+		<%end%>
+	</ul>
+</html>			 
