@@ -1,0 +1,41 @@
+<html>
+	<h1>Cadastro</h1>
+	<!se a requisição causa efeito colateral deve ser via post>
+	<!xhtml é a junção do html e xml br é html e o xhtml é <br/>
+	<! Para resolver o problema da url usa-se o form_tag do FormTagHelper
+	<form action="/restaurantes/create" method="post">
+	<!	<% form_tag :action => <!'create' do %>
+	<! O form_tag pode ser substituido por form_for>
+	<% form_for :restaurante, :url => {:action => 'index'} do |f| %>
+	<!sendo assim o text_field muda tambem>
+		<%= f.text_field 'nome' %>
+		<%= f.text_field 'endereco' %>
+		<%= f.text_field 'especialidade' %>
+	<!
+		<input name = "nome" /> <br/>
+		<!poderia ser (name = "restaurante [nome]"), conveção do Rails
+		<input name = "restaurante [nome]" /> <!<br/>		
+	<!>
+	<!Podemos usar o helper "text_field" para preencher a caixa diretamente e também verifica a validação
+	antes, coloca a caixa de texto dentro de uma div class=fieldiferror>
+		<%= text_field 'restaurante', 'nome' %>
+		<%= text_field 'restaurante', 'endereco' %>
+		<%= text_field 'restaurante', 'especialidade' %>		
+		<! o input pode ser substituido por submit_tag
+		<input type = "submit" value = "Enviar" /> 		
+		<%= submit_tag 'Enviar'%>
+	<%end%>
+	<!</form>	
+	<% restaurante.errors.each do |error|
+		<p> <%= error%></p>
+	<%end%>
+	<! ou >
+	<%= error_messages_for :restaurante %>
+	<! para imprimir a frase de erro de um só campo usa-se>
+	<%= error_message_on :restaurante, :nome %>
+	
+	<!Auxiliares ActionView::Helpers:FormHelper #esta associado ao ActiveRecord>
+	<!ActionView::Helpers:FormTagHelper #Tag significa que serve para tudo não só para ActiveRecord>
+	
+	
+</html>	

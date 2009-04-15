@@ -4,6 +4,7 @@
 		<! Não vai funcionar, porque é redirecionado para outra página
 		Pode ser resolvido com uma varíavel flash que resiste a um redirect
 		<%= @mensagem %> 
+		<%= flash[:notice] %>
 		
 		<% @restaurantes.each do |restaurante| %>
 			<li> <%= restaurante.nome %> 
