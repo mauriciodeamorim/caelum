@@ -3,7 +3,7 @@ class RestaurantesController < ApplicationController
 		@restaurantes = Restaurante.all
 	end
 	def destroy
-		@resturante = Restaurante.find( params [:id])
+		@restaurante = Restaurante.find(params[:id])
 		@restaurante.destroy
 		#isto não funciona
 		#@mensagem = "Removido com sucesso"
@@ -15,22 +15,23 @@ class RestaurantesController < ApplicationController
 		@restaurante = Restaurante.new
 	end
 	def create
-	=begin
+=begin
 #	@restaurante = Restaurante.new
 #	@restaurante.nome = params['nome']
-	=end
+=end
 	#poderia ser como um hash
 	#params['restaurante'] #que um hash
 	#entao passa direto na instancia da classe
 	@restaurante = Restaurante.new params[:restaurante]
 #	@restaurante.save # retorna true ou false se der problema de validação/gravação	
 	#o save fica melhor fazendo o tratamento
-	if @restaurante.save
-		flash[:notice]= "Salvo com sucesso"
-		redirect_to :action => 'index'
-	else
-		#renderize a view da action new
-		#se der problema de validação o formulario é mostrado com o último preenchimento
-		render :action => 'new'
+		if @restaurante.save
+			flash[:notice]= "Salvo com sucesso"
+			redirect_to :action => 'index'
+		else
+			#renderize a view da action new
+			#se der problema de validação o formulario é mostrado com o último preenchimento
+			render :action => 'new'
+		end
 	end
 end

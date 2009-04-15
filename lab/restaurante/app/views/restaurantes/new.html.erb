@@ -1,16 +1,19 @@
 <html>
-	<h1>Cadastro</h1>
+	<h1>Cadastro Restaurante</h1>
 	<!se a requisição causa efeito colateral deve ser via post>
 	<!xhtml é a junção do html e xml br é html e o xhtml é <br/>
 	<! Para resolver o problema da url usa-se o form_tag do FormTagHelper
 	<form action="/restaurantes/create" method="post">
-	<!	<% form_tag :action => <!'create' do %>
+	<!	
+	 form_tag :action => <!'create' do 
 	<! O form_tag pode ser substituido por form_for>
-	<% form_for :restaurante, :url => {:action => 'index'} do |f| %>
+	<% form_for :restaurante, :url => {:action => 'create'} do |f| %>
 	<!sendo assim o text_field muda tambem>
-		<%= f.text_field 'nome' %>
-		<%= f.text_field 'endereco' %>
-		<%= f.text_field 'especialidade' %>
+		Nome <%= f.text_field 'nome' %> <br/><br/>
+		Endereco <%= f.text_field 'endereco' %> <br/><br/>
+		Especialidade <%= f.text_field 'especialidade' %> <br/><br/>
+		<%= submit_tag 'Enviar'%>
+	<% end %>
 	<!
 		<input name = "nome" /> <br/>
 		<!poderia ser (name = "restaurante [nome]"), conveção do Rails
@@ -18,24 +21,27 @@
 	<!>
 	<!Podemos usar o helper "text_field" para preencher a caixa diretamente e também verifica a validação
 	antes, coloca a caixa de texto dentro de uma div class=fieldiferror>
-		<%= text_field 'restaurante', 'nome' %>
-		<%= text_field 'restaurante', 'endereco' %>
-		<%= text_field 'restaurante', 'especialidade' %>		
+	<!
+		%= text_field 'restaurante', 'nome' %
+		%= text_field 'restaurante', 'endereco' %
+		%= text_field 'restaurante', 'especialidade' %		
 		<! o input pode ser substituido por submit_tag
-		<input type = "submit" value = "Enviar" /> 		
-		<%= submit_tag 'Enviar'%>
-	<%end%>
+		<input type = "submit" value = "Enviar" />
 	<!</form>	
-	<% restaurante.errors.each do |error|
-		<p> <%= error%></p>
-	<%end%>
-	<! ou >
+	<!
+	% restaurante.errors.each do |error|
+		<p %= error% </p
+	<end
+	ou  usa-se>
 	<%= error_messages_for :restaurante %>
 	<! para imprimir a frase de erro de um só campo usa-se>
 	<%= error_message_on :restaurante, :nome %>
 	
 	<!Auxiliares ActionView::Helpers:FormHelper #esta associado ao ActiveRecord>
 	<!ActionView::Helpers:FormTagHelper #Tag significa que serve para tudo não só para ActiveRecord>
-	
-	
+	<!uso do partial com o "render">
+	<%= render :partial => 'rodape' %>
+	<!uso de Helper método menu
+	%= menu %
+	>
 </html>	

@@ -1,0 +1,27 @@
+<html>
+	<head></head>
+	<body></body>
+	<div> Primeira parte 
+		<!funciona como a master page, verificar como usar>
+		<% yield %>
+		
+		<! um truque no Rails é o "if funcional"
+		%= @titulo || "Alguma coisa"
+	
+		<! Esta é uma forma de iniciar uma variável se ela estiver vazia>
+		<!Lazy loading - a primeira vez que eu chamar carrega
+		def texto
+			if @texto.nil?
+				@texto = "texto padrao"
+			end
+		@texto
+		end
+		<! em uma linha fica
+		def texto
+			@texto = @texto || "default"
+			ou
+			@texto ||= "default"
+		end
+		>		
+	</div>
+</html>

@@ -605,3 +605,282 @@ SGFzaHsABjoKQHVzZWR7AA==--f8bfbcc5fb19f4781d0604138319fd58fb1654b1
 Rendering restaurantes/index
   [4;35;1mRestaurante Columns (0.001666)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
 Completed in 0.03433 (29 reqs/sec) | Rendering: 0.00822 (23%) | DB: 0.00930 (27%) | 200 OK [http://localhost/restaurantes]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:40:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mSQL (0.000194)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRestaurante Load (0.000245)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering template within layouts/restaurantes
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.001101)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.04150 (24 reqs/sec) | Rendering: 0.01602 (38%) | DB: 0.00163 (3%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:40:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mRestaurante Load (0.000200)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering template within layouts/restaurantes
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.001186)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.02408 (41 reqs/sec) | Rendering: 0.00739 (30%) | DB: 0.00139 (5%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:41:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mRestaurante Load (0.000183)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering template within layouts/restaurantes
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.002163)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.03545 (28 reqs/sec) | Rendering: 0.00761 (21%) | DB: 0.00235 (6%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#home (for 127.0.0.1 at 2009-04-15 12:41:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"home", "controller"=>"restaurantes"}
+
+
+ActionController::UnknownAction (No action responded to home):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing RestaurantesController#home (for 127.0.0.1 at 2009-04-15 12:44:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"home", "controller"=>"restaurantes"}
+
+
+ActionController::UnknownAction (No action responded to home):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:44:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mRestaurante Load (0.000341)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering template within layouts/restaurantes
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.002863)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.02832 (35 reqs/sec) | Rendering: 0.00915 (32%) | DB: 0.00320 (11%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:46:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mSQL (0.000195)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000096)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mRestaurante Load (0.000230)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering template within layouts/restaurantes
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.006731)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.04107 (24 reqs/sec) | Rendering: 0.01619 (39%) | DB: 0.00725 (17%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:46:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mRestaurante Load (0.000223)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering template within layouts/restaurantes
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.001214)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.02789 (35 reqs/sec) | Rendering: 0.00750 (26%) | DB: 0.00144 (5%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:46:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mRestaurante Load (0.000214)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering template within layouts/restaurantes
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.001277)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.03391 (29 reqs/sec) | Rendering: 0.00949 (27%) | DB: 0.00149 (4%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:46:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mRestaurante Load (0.000195)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering template within layouts/restaurantes
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.001160)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.02375 (42 reqs/sec) | Rendering: 0.00732 (30%) | DB: 0.00136 (5%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#index (for 127.0.0.1 at 2009-04-15 12:46:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"index", "controller"=>"restaurantes"}
+  [4;36;1mRestaurante Load (0.000175)[0m   [0;1mSELECT * FROM `restaurantes` [0m
+Rendering restaurantes/index
+  [4;35;1mRestaurante Columns (0.001213)[0m   [0mSHOW FIELDS FROM `restaurantes`[0m
+Completed in 0.02902 (34 reqs/sec) | Rendering: 0.01095 (37%) | DB: 0.00139 (4%) | 200 OK [http://localhost/restaurantes/]
+
+
+Processing RestaurantesController#home (for 127.0.0.1 at 2009-04-15 12:47:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2Y0Yjg5ZTU1MDNkMTcwNjUzYzVmNzk5MWQwZDA0
+OTUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--ddd79828e5a3872ea98c5a22b81fab9ee1079daf
+  Parameters: {"action"=>"home", "controller"=>"restaurantes"}
+
+
+ActionController::UnknownAction (No action responded to home):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/webrick_server.rb:62:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (not_found)
