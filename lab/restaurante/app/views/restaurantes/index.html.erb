@@ -1,10 +1,16 @@
 <html>
 	<h1>Listagem</h1>
-	<ul>
-		<%@restaurante.each do |restaurante| %>
+	<ul> 
+		<! Não vai funcionar, porque é redirecionado para outra página
+		Pode ser resolvido com uma varíavel flash que resiste a um redirect
+		<%= @mensagem %> 
+		
+		<% @restaurantes.each do |restaurante| %>
 			<li> <%= restaurante.nome %> 
-				<! Lembrar sempre da url relativa ../>
-				<a href="../restaurantes/destroy?id= <% restaurante.id %>">  Remover </a>
+				<! Lembrar sempre da url relativa ../ 
+				<a href="../restaurantes/destroy?id= <% restaurante.id %> <!">  <!Remover </a>
+				
+				
 				<!usando os helpers (ActionView::UrlHelper) para resolver o problema acima>
 				<%= link_to 'Remover', :action => 'destroy', :id => restaurante %>
 			</li>

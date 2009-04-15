@@ -1,2 +1,11 @@
 class RestaurantesController < ApplicationController
+	def index #Action
+		@restaurantes = Restaurante.all
+	end
+	def destroy
+		@resturante = Restaurante.find( params [:id])
+		@restaurante.destroy
+		@mensagem = "Removido com sucesso"
+		redirect_to :action => 'index'
+	end
 end
