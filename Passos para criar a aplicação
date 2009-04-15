@@ -127,3 +127,7 @@ has_many :clientes, :through => :qualificacoes
 relacionamento da página 53 figura "a"
 
 =end
+
+========
+15/04/09
+ruby script/generate controller restaurantes
