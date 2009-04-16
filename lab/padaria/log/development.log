@@ -1,0 +1,91 @@
+  [4;36;1mSQL (0.000244)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000117)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000307)[0m   [0;1mCREATE DATABASE `padaria_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;35;1mSQL (0.000126)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.000096)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000275)[0m   [0mCREATE DATABASE `padaria_production` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000098)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000266)[0m   [0;1mCREATE DATABASE `padaria_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000184)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000131)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000387)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.124786)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.028901)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000395)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000181)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000095)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000390)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000598)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePadarias (20090416115443)
+  [4;36;1mSQL (0.008138)[0m   [0;1mCREATE TABLE `padarias` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nome` varchar(80), `endereco` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.049691)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090416115443')[0m
+  [4;36;1mSQL (0.000478)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000252)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000253)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.041626)[0m   [0mSHOW FIELDS FROM `padarias`[0m
+  [4;36;1mSQL (0.000991)[0m   [0;1mdescribe `padarias`[0m
+  [4;35;1mSQL (0.000465)[0m   [0mSHOW KEYS FROM `padarias`[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000430)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000209)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePadarias (20090416115443)
+Migrating to AddColumnEspecialidade (20090416120402)
+  [4;36;1mSQL (0.000181)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000093)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000395)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000202)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePadarias (20090416115443)
+Migrating to AddColumnEspecialidade (20090416120402)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'padaria_development.restaurantes' doesn't exist: ALTER TABLE `restaurantes` ADD `especialidade` varchar(40)[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000117)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000430)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000230)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePadarias (20090416115443)
+Migrating to AddColumnEspecialidade (20090416120402)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'padaria_development.padaria' doesn't exist: ALTER TABLE `padaria` ADD `especialidade` varchar(40)[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000095)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000404)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000196)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePadarias (20090416115443)
+Migrating to AddColumnEspecialidade (20090416120402)
+  [4;36;1mSQL (0.042855)[0m   [0;1mALTER TABLE `padarias` ADD `especialidade` varchar(40)[0m
+  [4;35;1mSQL (0.001051)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090416120402')[0m
+  [4;36;1mSQL (0.000600)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000273)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000277)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001113)[0m   [0mSHOW FIELDS FROM `padarias`[0m
+  [4;36;1mSQL (0.001015)[0m   [0;1mdescribe `padarias`[0m
+  [4;35;1mSQL (0.000460)[0m   [0mSHOW KEYS FROM `padarias`[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000093)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPadaria Columns (0.001935)[0m   [0;1mSHOW FIELDS FROM `padarias`[0m
+  [4;35;1mSQL (0.000155)[0m   [0mBEGIN[0m
+  [4;36;1mPadaria Create (0.000439)[0m   [0;1mINSERT INTO `padarias` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-16 12:17:08', 'Vende pão', 'Rua Primeira, 125', 'Primeira', '2009-04-16 12:17:08')[0m
+  [4;35;1mSQL (0.002491)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mBEGIN[0m
+  [4;35;1mPadaria Update (0.022133)[0m   [0mUPDATE `padarias` SET `nome` = 'Segunda', `endereco` = 'Rua Segunda, 125', `especialidade` = 'Vende pizza', `updated_at` = '2009-04-16 12:17:47' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.003808)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000140)[0m   [0mBEGIN[0m
+  [4;36;1mPadaria Update (0.000521)[0m   [0;1mUPDATE `padarias` SET `nome` = 'Terceira', `endereco` = 'Rua Terceira, 00000125', `especialidade` = 'Vende esfiha', `updated_at` = '2009-04-16 12:18:26' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.002505)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mBEGIN[0m
+  [4;35;1mPadaria Update (0.000499)[0m   [0mUPDATE `padarias` SET `nome` = 'quarta', `updated_at` = '2009-04-16 12:18:45' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.005098)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mPadaria Update (0.000486)[0m   [0;1mUPDATE `padarias` SET `nome` = 'quarta .....', `updated_at` = '2009-04-16 12:18:52' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.001241)[0m   [0mCOMMIT[0m
+  [4;36;1mPadaria Load (0.009178)[0m   [0;1mSELECT * FROM `padarias` [0m
+  [4;35;1mSQL (0.000144)[0m   [0mBEGIN[0m
+  [4;36;1mPadaria Create (0.000387)[0m   [0;1mINSERT INTO `padarias` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-16 12:20:31', NULL, NULL, 'Terceira', '2009-04-16 12:20:31')[0m
+  [4;35;1mSQL (0.004798)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mBEGIN[0m
+  [4;35;1mPadaria Create (0.000370)[0m   [0mINSERT INTO `padarias` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-16 12:21:01', NULL, 'Rua Segunda, 125', 'Segunda', '2009-04-16 12:21:01')[0m
+  [4;36;1mSQL (0.002655)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000135)[0m   [0mBEGIN[0m
+  [4;36;1mPadaria Create (0.000403)[0m   [0;1mINSERT INTO `padarias` (`updated_at`, `especialidade`, `endereco`, `nome`, `created_at`) VALUES('2009-04-16 12:21:48', NULL, 'Rua adadsda sdsada, 125', 'fafafafa', '2009-04-16 12:21:48')[0m
+  [4;35;1mSQL (0.004512)[0m   [0mCOMMIT[0m
+  [4;36;1mPadaria Load (0.000456)[0m   [0;1mSELECT * FROM `padarias` [0m

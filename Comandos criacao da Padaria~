@@ -1,0 +1,20 @@
+cd projetos/lab
+rails padaria -d mysql
+cd padaria
+script/generate model padaria
+rake db:migrate
+script/generate migration adiciona_coluna_especialidade #cria o arquivo de migração
+
+
+
+
+
+
+
+Terminal com Mysql
+cd projetos/lab/padaria
+mysql -u root
+show databases;
+use padaria_development;
+show tables;
+desc padarias;

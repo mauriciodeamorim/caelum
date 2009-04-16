@@ -1,0 +1,8 @@
+<p id="comentario_<%= comentario.id %>">
+	<%= comentario.conteudo %> - 
+	<%= link_to_remote 'Remover', :url => comentario_path(comentario.id), :method => :delete %>
+	
+</p> 
+
+<! para o Ajax usa-se link_to_remote, o normal é link_to>
+<! link_to_remote 'Remover', :url = comentario_path(comentario.id), :method = :delete  >

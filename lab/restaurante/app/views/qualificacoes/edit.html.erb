@@ -1,0 +1,28 @@
+<h1>Editing qualificacao</h1>
+
+<% form_for(@qualificacao) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :cliente_id %><br />
+    <%= f.text_field :cliente_id %>
+  </p>
+  <p>
+    <%= f.label :restaurante_id %><br />
+    <%= f.text_field :restaurante_id %>
+  </p>
+  <p>
+    <%= f.label :nota %><br />
+    <%= f.text_field :nota %>
+  </p>
+  <p>
+    <%= f.label :valor_gasto %><br />
+    <%= f.text_field :valor_gasto %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @qualificacao %> |
+<%= link_to 'Back', qualificacoes_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Cliente:</b>
+  <%=h @qualificacao.cliente_id %>
+</p>
+
+<p>
+  <b>Restaurante:</b>
+  <%=h @qualificacao.restaurante_id %>
+</p>
+
+<p>
+  <b>Nota:</b>
+  <%=h @qualificacao.nota %>
+</p>
+
+<p>
+  <b>Valor gasto:</b>
+  <%=h @qualificacao.valor_gasto %>
+</p>
+
+
+<%= link_to 'Edit', edit_qualificacao_path(@qualificacao) %> |
+<%= link_to 'Back', qualificacoes_path %>

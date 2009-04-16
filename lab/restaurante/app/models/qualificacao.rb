@@ -1,6 +1,7 @@
 class Qualificacao < ActiveRecord::Base
 	belongs_to :restaurante
 	belongs_to :cliente
+	has_many :comentarios, :as => :comentavel	
 end
 
 

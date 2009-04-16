@@ -1,0 +1,18 @@
+<p>
+  <b>Conteudo:</b>
+  <%=h @comentario.conteudo %>
+</p>
+
+<p>
+  <b>Comentavel:</b>
+  <%=h @comentario.comentavel_id %>
+</p>
+
+<p>
+  <b>Comentavel type:</b>
+  <%=h @comentario.comentavel_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_comentario_path(@comentario) %> |
+<%= link_to 'Back', comentarios_path %>

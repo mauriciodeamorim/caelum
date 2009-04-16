@@ -1,6 +1,17 @@
 class RestaurantesController < ApplicationController
 	def index #Action
-		@restaurantes = Restaurante.all
+		@restaurantes = Restaurante.all :order => 'nome'
+		#Isto faz com que suporte vários formatos através do Accept : 'text/xml'
+		# /restaurantes?format=xml (chama diretor pela url um formato
+		# /restaurantes/show/1.xml
+		respond_to do |format|
+			format.html
+			format.xml {render :text => @restarantes.to_xml, content_type => 'text/xml'}
+			#ou direto resumido
+			#format.xml {render :xml => @restarantes}
+			#bloco com uma linha usa chaves, mas de um linha usa (do end)
+			format.json {render :text => @restarantes.to_json}
+		end
 	end
 	def destroy
 		@restaurante = Restaurante.find(params[:id])

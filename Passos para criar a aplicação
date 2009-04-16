@@ -135,3 +135,22 @@ ruby script/generate controller restaurantes
 
 ===
 rotas
+fotos e video
+abrir routes.rb
+rake routes
+
+=======
+dicas comandos Linux
+wich nome_arquivo
+cat nome_arquivo
+
+=====
+criação dos clientes e qualificacaoescapando a migração
+
+script/generate scaffold --skip-migration cliente nome:string idade:integer
+script/generate scaffold --skip-migration qualificacao cliente_id:integer restaurante_id:integer nota:float valor_gasto:float
+
+
+=======
+alterando o modelo
+script/generate migration altera_tipo_campo_comentario_type

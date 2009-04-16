@@ -1,0 +1,24 @@
+<h1>Editing comentario</h1>
+
+<% form_for(@comentario) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :conteudo %><br />
+    <%= f.text_area :conteudo %>
+  </p>
+  <p>
+    <%= f.label :comentavel_id %><br />
+    <%= f.text_field :comentavel_id %>
+  </p>
+  <p>
+    <%= f.label :comentavel_type %><br />
+    <%= f.text_field :comentavel_type %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @comentario %> |
+<%= link_to 'Back', comentarios_path %>

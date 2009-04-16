@@ -1,9 +1,19 @@
 class RestaurantesController < ApplicationController
 	def index #Action
-		@restaurantes = Restaurante.all
+		@restaurantes = Restaurante.all :order => 'nome'
+		#Isto faz com que suporte vários formatos através do Accept : 'text/xml'
+		# /restaurantes?format=xml (chama diretor pela url um formato
+		# /restaurantes/show/1.xml
+		respond_to do |format|
+			format.html
+			format.xml {render :text => @restarantes.to_xml, content_type => 'text/xml'}
+			#ou direto resumido
+			#format.xml {render :xml => @restarantes
+			format.json {render :text => @restarantes.to_json}
+		end
 	end
 	def destroy
-		@resturante = Restaurante.find( params [:id])
+		@restaurante = Restaurante.find(params[:id])
 		@restaurante.destroy
 		#isto não funciona
 		#@mensagem = "Removido com sucesso"

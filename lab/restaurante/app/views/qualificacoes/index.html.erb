@@ -1,0 +1,26 @@
+<h1>Listing qualificacoes</h1>
+
+<table>
+  <tr>
+    <th>Cliente</th>
+    <th>Restaurante</th>
+    <th>Nota</th>
+    <th>Valor gasto</th>
+  </tr>
+
+<% for qualificacao in @qualificacoes %>
+  <tr>
+    <td><%=h qualificacao.cliente_id %></td>
+    <td><%=h qualificacao.restaurante_id %></td>
+    <td><%=h qualificacao.nota %></td>
+    <td><%=h qualificacao.valor_gasto %></td>
+    <td><%= link_to 'Show', qualificacao %></td>
+    <td><%= link_to 'Edit', edit_qualificacao_path(qualificacao) %></td>
+    <td><%= link_to 'Destroy', qualificacao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New qualificacao', new_qualificacao_path %>

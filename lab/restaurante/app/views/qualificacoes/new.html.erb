@@ -1,0 +1,34 @@
+<h1>New qualificacao</h1>
+
+<% form_for(@qualificacao) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :cliente_id %><br />
+    <%= f.text_field :cliente_id %>
+  </p>
+  <p>
+  	<%= f.collection_select :cliente_id, Cliente.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :restaurante_id %><br />
+    <%= f.text_field :restaurante_id %>
+  </p>
+  <p>
+  	<%= select :qualificacao, :restaurante_id,
+  		Restaurante.all.map {|r| [r.nome, r.id]} %>
+  </p>
+  <p>
+    <%= f.label :nota %><br />
+    <%= f.text_field :nota %>
+  </p>
+  <p>
+    <%= f.label :valor_gasto %><br />
+    <%= f.text_field :valor_gasto %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', qualificacoes_path %>
